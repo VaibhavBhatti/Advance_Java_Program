@@ -1,0 +1,47 @@
+package com.jspiders.JDBC.operation;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.concurrent.Callable;
+
+import com.mysql.cj.jdbc.CallableStatement;
+
+public class JDBCCall {
+	private static Connection connection;
+	private static CallableStatement callableStatement;
+	private static ResultSet resultSet;
+	private static String query;
+	
+	
+	public static void main(String[] args) {
+	try {
+		connection =openConnection();
+		query = "call p1()";
+		callableStatement = connection.prepareCall(query);
+		callableStatement.execute();
+		resultSet
+		
+		
+		while(resultSet.next()) {
+			System.out.println(resultSet.getInt(1));
+			System.out.println(resultSet.getString(2));
+			System.out.println(resultSet.getString(3));
+			System.out.println(resultSet.getInt(4));
+			System.out.println(resultSet.getDouble(5));
+		}
+		
+				
+	}
+		
+		
+	}
+	
+	private static Connection openConnection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+
+}

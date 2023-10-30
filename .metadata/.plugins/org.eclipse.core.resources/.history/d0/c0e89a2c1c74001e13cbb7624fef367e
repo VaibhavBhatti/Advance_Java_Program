@@ -1,0 +1,5 @@
+package com.jspiders.serializationddeserialization.object;
+
+public class User {
+
+}

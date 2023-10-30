@@ -1,0 +1,7 @@
+package com.jspiders.designpattern.structural;
+
+public class Game {
+   public interface game{
+	   void football();
+	    void hockey();}
+}
